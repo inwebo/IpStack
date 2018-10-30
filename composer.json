@@ -1,0 +1,23 @@
+{
+  "name": "inwebo/ipstackbundle",
+  "description": "Simple PHP7.2 Ipstack Model",
+  "type": "symfony-component",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "authors": [
+    {
+      "name": "inwebo"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": { "Inwebo\\Component\\IpStackBundle\\": "" }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/inwebo/IpStack.git"
+    }
+  ]
+}
