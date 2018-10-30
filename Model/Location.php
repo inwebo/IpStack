@@ -9,7 +9,7 @@
 namespace Inwebo\Component\IpStack\Model;
 
 
-class Location
+class Location implements LocationInterface
 {
     /** @var string */
     protected $geonameId;

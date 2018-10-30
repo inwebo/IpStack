@@ -2,20 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: inwebo
- * Date: 28/10/18
- * Time: 18:55
+ * Date: 30/10/18
+ * Time: 20:22
  */
 
 namespace Inwebo\Component\IpStack\Model;
 
-
-class Connection implements ConnectionInterface
+interface ConnectionInterface
 {
-    /** @var string */
-    protected $asn;
-    /** @var string */
-    protected $isp;
-
     /**
      * Returns the Autonomous System Number associated with the IP.
      *
@@ -23,34 +17,22 @@ class Connection implements ConnectionInterface
      *
      * @return string
      */
-    public function getAsn(): string
-    {
-        return $this->asn;
-    }
+    public function getAsn(): string;
 
     /**
      * @param string $asn
      */
-    public function setAsn(string $asn): void
-    {
-        $this->asn = $asn;
-    }
+    public function setAsn(string $asn): void;
 
     /**
      * Returns the name of the ISP associated with the IP.
      *
      * @return string
      */
-    public function getIsp(): string
-    {
-        return $this->isp;
-    }
+    public function getIsp(): string;
 
     /**
      * @param string $isp
      */
-    public function setIsp(string $isp): void
-    {
-        $this->isp = $isp;
-    }
+    public function setIsp(string $isp): void;
 }

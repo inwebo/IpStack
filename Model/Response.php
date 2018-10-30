@@ -8,7 +8,7 @@
 
 namespace Inwebo\Component\IpStack\Model;
 
-class Response
+class Response implements ResponseInterface
 {
 
     const DEFAULT_COUNTRY_CODE = 'FR';

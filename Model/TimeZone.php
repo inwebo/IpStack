@@ -9,7 +9,7 @@
 namespace Inwebo\Component\IpStack\Model;
 
 
-class TimeZone
+class TimeZone implements TimeZoneInterface
 {
     /** @var string */
     protected $id;

@@ -9,7 +9,7 @@
 namespace Inwebo\Component\IpStack\Model;
 
 
-class Currency
+class Currency implements CurrencyInterface
 {
     /** @var string */
     protected $code;

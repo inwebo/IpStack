@@ -9,7 +9,7 @@
 namespace Inwebo\Component\IpStack\Model;
 
 
-class Languages
+class Languages implements LanguagesInterface
 {
     /** @var Language[] */
     protected $languages;
