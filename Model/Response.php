@@ -276,37 +276,4 @@ class Response implements ResponseInterface
         return $this->longitude;
     }
     // endregion
-
-    /**
-     * IpStack constructor.
-     *
-     * @param string $raw
-     */
-    public function __construct(string $raw)
-    {
-        $this->raw = $raw;
-
-        $this->hydrate($raw);
-    }
-
-    /**
-     * @param string $json
-     */
-    protected function hydrate(string $json)
-    {
-        $json       = json_decode($json);
-        $this->ip   = $json->ip;
-        $this->type = $json->type;
-
-        $this->continentCode = (!is_null($json->continent_code)) ? $json->continent_code : 'EU';
-        $this->continentName = (!is_null($json->continent_name)) ? $json->continent_name : 'Europe';
-        $this->countryCode   = (!is_null($json->country_code))   ? $json->country_code   : 'FR';
-        $this->countryName   = (!is_null($json->country_name))   ? $json->country_name   : 'France';
-        $this->regionCode    = (!is_null($json->region_code))    ? $json->region_code    : 'IDF';
-        $this->regionName    = (!is_null($json->region_name))    ? $json->region_name    : 'ÃŽle-de-France';
-        $this->city          = (!is_null($json->city))           ? $json->city           : 'Paris';
-        $this->zip           = (!is_null($json->zip))            ? $json->zip            : '75001';
-        $this->latitude      = (!is_null($json->latitude))       ? $json->latitude       : 48.8628;
-        $this->longitude     = (!is_null($json->longitude))      ? $json->longitude      : 2.3292;
-    }
 }
