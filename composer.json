@@ -2,7 +2,7 @@
   "name": "inwebo/ipstack-model",
   "description": "Simple PHP7.2 Ipstack Model",
   "type": "library",
-  "license": "GNU GENERAL PUBLIC LICENSE",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "inwebo"
