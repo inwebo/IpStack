@@ -8,7 +8,6 @@
 
 namespace Inwebo\Component\IpStack\Model;
 
-
 class ThreatTypes
 {
     const TOR = 0;

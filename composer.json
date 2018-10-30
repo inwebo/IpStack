@@ -1,7 +1,7 @@
 {
-  "name": "inwebo/ipstackbundle",
+  "name": "inwebo/ipstack-model",
   "description": "Simple PHP7.2 Ipstack Model",
-  "type": "symfony-component",
+  "type": "library",
   "license": "GNU GENERAL PUBLIC LICENSE",
   "authors": [
     {
