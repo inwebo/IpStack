@@ -1,10 +1,13 @@
 <?php
-namespace Inwebo\Bundle\IpStackBundle\Model;
+namespace Inwebo\Component\IpStack\Model\Factory;
 
+
+use Inwebo\Bundle\IpStackBundle\Model\Decorators\IpStackDecoratorInterface;
+use Inwebo\Component\IpStack\Model\ResponseInterface;
 
 class FactoryAbstract implements FactoryInterface
 {
-    /** @var Decorators\IpStackDecoratorInterface */
+    /** @var IpStackDecoratorInterface */
     protected $decorator;
 
     /**

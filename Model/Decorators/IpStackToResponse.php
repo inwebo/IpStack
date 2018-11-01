@@ -1,6 +1,10 @@
 <?php
 
-namespace Inwebo\Bundle\IpStackBundle\Model\Decorators;
+namespace Inwebo\Component\IpStack\Model\Decorators;
+
+use Inwebo\Bundle\IpStackBundle\Model\Decorators\IpStackDecoratorInterface;
+use Inwebo\Component\IpStack\Model\Response;
+use Inwebo\Component\IpStack\Model\ResponseInterface;
 
 class IpStackToResponse implements IpStackDecoratorInterface
 {
@@ -13,6 +17,6 @@ class IpStackToResponse implements IpStackDecoratorInterface
     {
         // Mapping
 
-        return new Response($json);
+        return new Response();
     }
 }

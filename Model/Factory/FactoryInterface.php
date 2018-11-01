@@ -6,7 +6,9 @@
  * Time: 20:58
  */
 
-namespace Inwebo\Bundle\IpStackBundle\Model;
+namespace Inwebo\Component\IpStack\Model\Factory;
+
+use Inwebo\Component\IpStack\Model\ResponseInterface;
 
 interface FactoryInterface
 {
