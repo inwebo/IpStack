@@ -9,7 +9,7 @@
 namespace Inwebo\Component\IpStack\Model;
 
 
-class Security implements SecurityInterface, SecurityInterface
+class Security implements SecurityInterface
 {
     /** @var bool */
     protected $isProxy;
