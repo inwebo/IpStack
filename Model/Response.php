@@ -10,9 +10,6 @@ namespace Inwebo\Component\IpStack\Model;
 
 class Response implements ResponseInterface
 {
-
-    const DEFAULT_COUNTRY_CODE = 'FR';
-
     // region attributs
     /** @var string */
     protected $ip;
@@ -42,6 +39,8 @@ class Response implements ResponseInterface
     protected $longitude;
     /** @var LocationInterface */
     protected $location;
+    /** @var TimeZoneInterface */
+    protected $timeZone;
     /** @var CurrencyInterface */
     protected $currency;
     /** @var ConnectionInterface */
@@ -62,9 +61,9 @@ class Response implements ResponseInterface
     }
 
     /**
-     * @param $ip
+     * @param string $ip
      */
-    public function setIp($ip)
+    public function setIp(string $ip)
     {
         $this->ip = $ip;
     }
@@ -99,6 +98,9 @@ class Response implements ResponseInterface
         return $this->type;
     }
 
+    /**
+     * @param string $type
+     */
     public function setType(string $type) : void
     {
         $this->type = $type;
@@ -149,7 +151,7 @@ class Response implements ResponseInterface
      */
     public function getCountryCode(): string
     {
-        return (!is_null($this->countryCode)) ? $this->countryCode : self::DEFAULT_COUNTRY_CODE;
+        return $this->countryCode;
     }
 
     /**
@@ -301,9 +303,9 @@ class Response implements ResponseInterface
     }
 
     /**
-     * @return CurrencyInterface
+     * @return CurrencyInterface|null
      */
-    public function getCurrency(): CurrencyInterface
+    public function getCurrency(): ?CurrencyInterface
     {
         return $this->currency;
     }
@@ -317,9 +319,9 @@ class Response implements ResponseInterface
     }
 
     /**
-     * @return ConnectionInterface
+     * @return ConnectionInterface|null
      */
-    public function getConnection(): ConnectionInterface
+    public function getConnection(): ?ConnectionInterface
     {
         return $this->connection;
     }
@@ -333,9 +335,9 @@ class Response implements ResponseInterface
     }
 
     /**
-     * @return SecurityInterface
+     * @return SecurityInterface|null
      */
-    public function getSecurity(): SecurityInterface
+    public function getSecurity(): ?SecurityInterface
     {
         return $this->security;
     }
@@ -346,6 +348,22 @@ class Response implements ResponseInterface
     public function setSecurity(SecurityInterface $security): void
     {
         $this->security = $security;
+    }
+
+    /**
+     * @return TimeZoneInterface|null
+     */
+    public function getTimeZone(): ?TimeZoneInterface
+    {
+        return $this->timeZone;
+    }
+
+    /**
+     * @param TimeZoneInterface $timeZone
+     */
+    public function setTimeZone(TimeZoneInterface $timeZone): void
+    {
+        $this->timeZone = $timeZone;
     }
     // endregion
 }

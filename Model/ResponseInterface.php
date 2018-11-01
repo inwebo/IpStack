@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: inwebo
- * Date: 30/10/18
- * Time: 20:26
+ * Date: 01/11/18
+ * Time: 13:27
  */
 
 namespace Inwebo\Component\IpStack\Model;
@@ -18,9 +18,9 @@ interface ResponseInterface
     public function getIp(): string;
 
     /**
-     * @param $ip
+     * @param string $ip
      */
-    public function setIp($ip);
+    public function setIp(string $ip);
 
     /**
      * Returns the hostname the requested IP resolves to, only returned if Hostname Lookup is enabled.
@@ -169,7 +169,52 @@ interface ResponseInterface
     public function setLongitude(float $longitude): void;
 
     /**
+     * @return LocationInterface
+     */
+    public function getLocation(): LocationInterface;
+
+    /**
      * @param LocationInterface $location
      */
     public function setLocation(LocationInterface $location): void;
+
+    /**
+     * @return CurrencyInterface|null
+     */
+    public function getCurrency(): ?CurrencyInterface;
+
+    /**
+     * @param CurrencyInterface $currency
+     */
+    public function setCurrency(CurrencyInterface $currency): void;
+
+    /**
+     * @return ConnectionInterface|null
+     */
+    public function getConnection(): ?ConnectionInterface;
+
+    /**
+     * @param ConnectionInterface $connection
+     */
+    public function setConnection(ConnectionInterface $connection): void;
+
+    /**
+     * @return SecurityInterface|null
+     */
+    public function getSecurity(): ?SecurityInterface;
+
+    /**
+     * @param SecurityInterface $security
+     */
+    public function setSecurity(SecurityInterface $security): void;
+
+    /**
+     * @return TimeZoneInterface|null
+     */
+    public function getTimeZone(): ?TimeZoneInterface;
+
+    /**
+     * @param TimeZoneInterface $timeZone
+     */
+    public function setTimeZone(TimeZoneInterface $timeZone): void;
 }
