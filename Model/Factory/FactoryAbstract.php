@@ -1,8 +1,7 @@
 <?php
 namespace Inwebo\Component\IpStack\Model\Factory;
 
-
-use Inwebo\Bundle\IpStackBundle\Model\Decorators\IpStackDecoratorInterface;
+use Inwebo\Component\IpStack\Model\Decorators\IpStackDecoratorInterface;
 use Inwebo\Component\IpStack\Model\ResponseInterface;
 
 class FactoryAbstract implements FactoryInterface
