@@ -7,7 +7,7 @@ namespace Inwebo\Component\IpStack\Model;
  */
 class ProxyTypes
 {
-    const CGI = 0;
-    const WEB = 1;
-    const VPN = 2;
+    const CGI = 'CGI Proxy';
+    const WEB = 'Web Proxy';
+    const VPN = 'VPN Proxy';
 }
