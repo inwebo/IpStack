@@ -6,8 +6,10 @@ namespace Inwebo\Component\IpStack\Model;
  */
 class IpStack
 {
-    const END_POINT_V1 = 'https://api.ipstack.com/';
-    const END_POINT    = self::END_POINT_V1;
+    const END_POINT_V1       = 'https://api.ipstack.com/';
+    const END_POINT_V1_CHECK = 'https://api.ipstack.com/check';
+    const END_POINT          = self::END_POINT_V1;
+    const END_POINT_CHECK    = self::END_POINT_V1_CHECK;
 
     const SUPPORTED_LANGUAGE = [
         'en' => 'en',
