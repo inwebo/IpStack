@@ -43,7 +43,10 @@ interface ResponseInterface
      */
     public function getType(): string;
 
-    public function setType($type): void;
+    /**
+     * @param string $type
+     */
+    public function setType(string $type): void;
 
     /**
      * Returns the 2-letter continent code associated with the IP.
@@ -159,4 +162,14 @@ interface ResponseInterface
      * @return float
      */
     public function getLongitude(): float;
+
+    /**
+     * @param float $longitude
+     */
+    public function setLongitude(float $longitude): void;
+
+    /**
+     * @param LocationInterface $location
+     */
+    public function setLocation(LocationInterface $location): void;
 }

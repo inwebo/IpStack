@@ -30,7 +30,15 @@ class Languages implements LanguagesInterface
         $this->languages = $languages;
     }
 
-    protected function __construct()
+    public function addLanguage(LanguageInterface $language)
+    {
+        $this->languages[] = $language;
+    }
+
+    /**
+     * Languages constructor.
+     */
+    public function __construct()
     {
         $this->languages = [];
     }

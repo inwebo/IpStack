@@ -40,13 +40,13 @@ class Response implements ResponseInterface
     protected $latitude;
     /** @var float */
     protected $longitude;
-    /** @var Location */
+    /** @var LocationInterface */
     protected $location;
-    /** @var Currency */
+    /** @var CurrencyInterface */
     protected $currency;
-    /** @var Connection */
+    /** @var ConnectionInterface */
     protected $connection;
-    /** @var Security */
+    /** @var SecurityInterface */
     protected $security;
     //endregion
 
@@ -99,7 +99,7 @@ class Response implements ResponseInterface
         return $this->type;
     }
 
-    public function setType($type) : void
+    public function setType(string $type) : void
     {
         $this->type = $type;
     }
@@ -274,6 +274,78 @@ class Response implements ResponseInterface
     public function getLongitude(): float
     {
         return $this->longitude;
+    }
+
+    /**
+     * @param float $longitude
+     */
+    public function setLongitude(float $longitude): void
+    {
+        $this->longitude = $longitude;
+    }
+
+    /**
+     * @return LocationInterface
+     */
+    public function getLocation(): LocationInterface
+    {
+        return $this->location;
+    }
+
+    /**
+     * @param LocationInterface $location
+     */
+    public function setLocation(LocationInterface $location): void
+    {
+        $this->location = $location;
+    }
+
+    /**
+     * @return CurrencyInterface
+     */
+    public function getCurrency(): CurrencyInterface
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @param CurrencyInterface $currency
+     */
+    public function setCurrency(CurrencyInterface $currency): void
+    {
+        $this->currency = $currency;
+    }
+
+    /**
+     * @return ConnectionInterface
+     */
+    public function getConnection(): ConnectionInterface
+    {
+        return $this->connection;
+    }
+
+    /**
+     * @param ConnectionInterface $connection
+     */
+    public function setConnection(ConnectionInterface $connection): void
+    {
+        $this->connection = $connection;
+    }
+
+    /**
+     * @return SecurityInterface
+     */
+    public function getSecurity(): SecurityInterface
+    {
+        return $this->security;
+    }
+
+    /**
+     * @param SecurityInterface $security
+     */
+    public function setSecurity(SecurityInterface $security): void
+    {
+        $this->security = $security;
     }
     // endregion
 }
