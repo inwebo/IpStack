@@ -32,14 +32,18 @@ class IpStack
     /**
      * @see https://ipstack.com/product
      */
-    const MAX_MONTHLY_REQUEST_LIMIT_FREE       = 10000;
-    const MAX_MONTHLY_REQUEST_LIMIT_BASIC      = 50000;
-    const MAX_MONTHLY_REQUEST_LIMIT_PRO        = 500000;
-    const MAX_MONTHLY_REQUEST_LIMIT_PRO_PLUS   = 2000000;
+    const MAX_MONTHLY_REQUEST_LIMIT_FREE     = 10000;
+    const MAX_MONTHLY_REQUEST_LIMIT_BASIC    = 50000;
+    const MAX_MONTHLY_REQUEST_LIMIT_PRO      = 500000;
+    const MAX_MONTHLY_REQUEST_LIMIT_PRO_PLUS = 2000000;
 
     /**
      * To Override
      */
-    const MAX_MONTHLY_REQUEST_LIMIT_CUSTOM     = null;
-    const CURRENT_PLAN = self::MAX_MONTHLY_REQUEST_LIMIT_FREE;
+    const MAX_MONTHLY_REQUEST_LIMIT_CUSTOM = null;
+
+    const CURRENT_PLAN                     = self::MAX_MONTHLY_REQUEST_LIMIT_FREE;
+
+
+
 }

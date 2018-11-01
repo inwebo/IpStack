@@ -1,8 +1,8 @@
 {
-  "name": "inwebo/ipstack-model",
-  "description": "Simple PHP7.2 Ipstack Model",
-  "type": "library",
-  "license": "GPL-3.0-or-later",
+  "name":        "inwebo/ipstack-model",
+  "description": "PHP7.2 Ipstack Model. Support the offcial API.",
+  "type":        "library",
+  "license":     "GPL-3.0-or-later",
   "authors": [
     {
       "name": "inwebo"
@@ -12,7 +12,7 @@
     "php": ">=7.1"
   },
   "autoload": {
-    "psr-4": { "Inwebo\\Component\\IpStackBundle\\": "" }
+    "psr-4": { "Inwebo\\Component\\IpStack\\": "" }
   },
   "repositories": [
     {
