@@ -1,14 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inwebo
- * Date: 28/10/18
- * Time: 19:06
- */
 
 namespace Inwebo\Component\IpStack\Model;
 
-
+/**
+ * Class Languages
+ */
 class Languages implements LanguagesInterface
 {
     /** @var Language[] */

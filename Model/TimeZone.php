@@ -1,14 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inwebo
- * Date: 28/10/18
- * Time: 18:54
- */
 
 namespace Inwebo\Component\IpStack\Model;
 
-
+/**
+ * Class TimeZone
+ */
 class TimeZone implements TimeZoneInterface
 {
     /** @var string */

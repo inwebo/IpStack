@@ -1,13 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inwebo
- * Date: 01/11/18
- * Time: 13:38
- */
 
 namespace Inwebo\Component\IpStack\Model;
 
+/**
+ * Interface SecurityInterface
+ */
 interface SecurityInterface
 {
     /**

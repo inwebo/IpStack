@@ -1,13 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inwebo
- * Date: 01/11/18
- * Time: 13:27
- */
 
 namespace Inwebo\Component\IpStack\Model;
 
+/**
+ * Interface ResponseInterface
+ */
 interface ResponseInterface
 {
     /**

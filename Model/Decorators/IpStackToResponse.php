@@ -115,6 +115,7 @@ class IpStackToResponse implements IpStackDecoratorInterface
 
 
             return $responseInterface;
+
         } catch (\Exception $e) {
             throw $e;
         }
