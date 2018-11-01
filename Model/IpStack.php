@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inwebo
- * Date: 01/11/18
- * Time: 13:57
- */
-
 namespace Inwebo\Component\IpStack\Model;
 
-
+/**
+ * Class IpStack
+ */
 class IpStack
 {
     const END_POINT_V1 = 'https://api.ipstack.com/';
@@ -30,4 +25,6 @@ class IpStack
         'json' => 'json',
         'xml'  => 'xml',
     ];
+
+    const MAX_MONTHLY_REQUEST_LIMIT = 10000;
 }
