@@ -2,7 +2,6 @@
 
 namespace Inwebo\Component\IpStack\Model\Decorators;
 
-use Inwebo\Bundle\IpStackBundle\Model\Decorators\IpStackDecoratorInterface;
 use Inwebo\Component\IpStack\Model\Connection;
 use Inwebo\Component\IpStack\Model\Currency;
 use Inwebo\Component\IpStack\Model\Language;

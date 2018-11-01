@@ -1,6 +1,6 @@
 <?php
 
-namespace Inwebo\Bundle\IpStackBundle\Model\Decorators;
+namespace Inwebo\Component\IpStack\Model\Decorators;
 
 use Inwebo\Component\IpStack\Model\ResponseInterface;
 
