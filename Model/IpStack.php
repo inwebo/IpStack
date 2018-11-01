@@ -25,4 +25,9 @@ class IpStack
         'ru' => 'ru',
         'zh' => 'zh',
     ];
+
+    const SUPPORTED_OUTPUT = [
+        'json' => 'json',
+        'xml'  => 'xml',
+    ];
 }
