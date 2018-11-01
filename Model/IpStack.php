@@ -26,5 +26,16 @@ class IpStack
         'xml'  => 'xml',
     ];
 
-    const MAX_MONTHLY_REQUEST_LIMIT = 10000;
+    /**
+     * @see https://ipstack.com/product
+     */
+    const MAX_MONTHLY_REQUEST_LIMIT_FREE       = 10000;
+    const MAX_MONTHLY_REQUEST_LIMIT_BASIC      = 50000;
+    const MAX_MONTHLY_REQUEST_LIMIT_PRO        = 500000;
+    const MAX_MONTHLY_REQUEST_LIMIT_PRO_PLUS   = 2000000;
+
+    /**
+     * To Override
+     */
+    const MAX_MONTHLY_REQUEST_LIMIT_CUSTOM     = null;
 }
