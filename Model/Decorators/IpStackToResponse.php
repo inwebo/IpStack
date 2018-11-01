@@ -3,11 +3,15 @@
 namespace Inwebo\Component\IpStack\Model\Decorators;
 
 use Inwebo\Bundle\IpStackBundle\Model\Decorators\IpStackDecoratorInterface;
+use Inwebo\Component\IpStack\Model\Connection;
+use Inwebo\Component\IpStack\Model\Currency;
 use Inwebo\Component\IpStack\Model\Language;
 use Inwebo\Component\IpStack\Model\Languages;
 use Inwebo\Component\IpStack\Model\Location;
 use Inwebo\Component\IpStack\Model\Response;
 use Inwebo\Component\IpStack\Model\ResponseInterface;
+use Inwebo\Component\IpStack\Model\Security;
+use Inwebo\Component\IpStack\Model\TimeZone;
 
 class IpStackToResponse implements IpStackDecoratorInterface
 {
@@ -57,6 +61,59 @@ class IpStackToResponse implements IpStackDecoratorInterface
             }
 
             $responseInterface->setLocation($location);
+
+            if (!is_null($jsonDecode->time_zone)) {
+                $timeZone = new TimeZone();
+
+                $timeZone->setId($jsonDecode->time_zone->id);
+                $timeZone->setCurrentTime($jsonDecode->time_zone->current_time);
+                $timeZone->setGmtOffset($jsonDecode->time_zone->gmt_offset);
+                $timeZone->setCode($jsonDecode->time_zone->code);
+                $timeZone->setIsDayLightSaving($jsonDecode->time_zone->is_daylight_saving);
+
+                $responseInterface->setTimeZone($timeZone);
+            }
+
+            if (!is_null($jsonDecode->currency)) {
+                $currency = new Currency();
+                $currency->setCode($jsonDecode->currency->code);
+                $currency->setName($jsonDecode->currency->name);
+                $currency->setPlural($jsonDecode->currency->plural);
+                $currency->setSymbol($jsonDecode->currency->symbol);
+                $currency->setSymbolNative($jsonDecode->currency->symbol_native);
+
+                $responseInterface->setCurrency($currency);
+            }
+
+            if (!is_null($jsonDecode->connection)) {
+                $connection = new Connection();
+                $connection->setAsn($jsonDecode->connection->asn);
+                $connection->setIsp($jsonDecode->connection->isp);
+
+                $responseInterface->setConnection($connection);
+            }
+
+            if (!is_null($jsonDecode->connection)) {
+                $connection = new Connection();
+                $connection->setAsn($jsonDecode->connection->asn);
+                $connection->setIsp($jsonDecode->connection->isp);
+
+                $responseInterface->setConnection($connection);
+            }
+
+            if (!is_null($jsonDecode->security)) {
+                $security = new Security();
+                $security->setIsProxy($jsonDecode->security->is_proxy);
+                $security->setProxyType($jsonDecode->security->is_proxy);
+                $security->setIsCrawler($jsonDecode->security->is_crawler);
+                $security->setCrawlerType($jsonDecode->security->crawler_type);
+                $security->setIsTor($jsonDecode->security->is_tor);
+                $security->setThreatLevel($jsonDecode->security->threat_level);
+                $security->setThreatTypes($jsonDecode->security->threat_types);
+
+                $responseInterface->setSecurity($security);
+            }
+
 
             return $responseInterface;
         } catch (\Exception $e) {

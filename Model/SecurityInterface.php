@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: inwebo
- * Date: 30/10/18
- * Time: 20:26
+ * Date: 01/11/18
+ * Time: 13:38
  */
 
 namespace Inwebo\Component\IpStack\Model;
@@ -25,9 +25,9 @@ interface SecurityInterface
     /**
      * Returns the type of proxy the IP is associated with.
      *
-     * @return int
+     * @return int|string
      */
-    public function getProxyType(): int;
+    public function getProxyType(): ?int;
 
     /**
      * @param int $proxyType
@@ -49,9 +49,9 @@ interface SecurityInterface
     /**
      * Returns the name of the crawler the IP is associated with.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCrawlerName(): string;
+    public function getCrawlerName(): ?string;
 
     /**
      * @param string $crawlerName
@@ -61,9 +61,9 @@ interface SecurityInterface
     /**
      * Returns the type of crawler the IP is associated with.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCrawlerType(): string;
+    public function getCrawlerType(): ?string;
 
     /**
      * @param string $crawlerType
@@ -93,4 +93,14 @@ interface SecurityInterface
      * @param string $threatLevel
      */
     public function setThreatLevel(string $threatLevel): void;
+
+    /**
+     * @return null|string
+     */
+    public function getThreatTypes(): ?string;
+
+    /**
+     * @param null|string $threatTypes
+     */
+    public function setThreatTypes(?string $threatTypes): void;
 }

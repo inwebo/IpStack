@@ -9,22 +9,24 @@
 namespace Inwebo\Component\IpStack\Model;
 
 
-class Security implements SecurityInterface
+class Security implements SecurityInterface, SecurityInterface
 {
     /** @var bool */
     protected $isProxy;
-    /** @var int */
+    /** @var int|null */
     protected $proxyType;
     /** @var bool */
     protected $isCrawler;
-    /** @var string */
+    /** @var string|null */
     protected $crawlerName;
-    /** @var string */
+    /** @var string|null */
     protected $crawlerType;
     /** @var bool */
     protected $isTor;
     /** @var string */
     protected $threatLevel;
+    /** @var string|null */
+    protected $threatTypes;
 
     /**
      * Returns true or false depending on whether or not the given IP is associated with a proxy.
@@ -47,9 +49,9 @@ class Security implements SecurityInterface
     /**
      * Returns the type of proxy the IP is associated with.
      *
-     * @return int
+     * @return int|string
      */
-    public function getProxyType(): int
+    public function getProxyType(): ?int
     {
         return $this->proxyType;
     }
@@ -83,9 +85,9 @@ class Security implements SecurityInterface
     /**
      * Returns the name of the crawler the IP is associated with.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCrawlerName(): string
+    public function getCrawlerName(): ?string
     {
         return $this->crawlerName;
     }
@@ -101,9 +103,9 @@ class Security implements SecurityInterface
     /**
      * Returns the type of crawler the IP is associated with.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCrawlerType(): string
+    public function getCrawlerType(): ?string
     {
         return $this->crawlerType;
     }
@@ -150,5 +152,21 @@ class Security implements SecurityInterface
     public function setThreatLevel(string $threatLevel): void
     {
         $this->threatLevel = $threatLevel;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getThreatTypes(): ?string
+    {
+        return $this->threatTypes;
+    }
+
+    /**
+     * @param null|string $threatTypes
+     */
+    public function setThreatTypes(?string $threatTypes): void
+    {
+        $this->threatTypes = $threatTypes;
     }
 }
