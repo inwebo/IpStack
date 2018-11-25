@@ -43,7 +43,4 @@ class IpStack
     const MAX_MONTHLY_REQUEST_LIMIT_CUSTOM = null;
 
     const CURRENT_PLAN                     = self::MAX_MONTHLY_REQUEST_LIMIT_FREE;
-
-
-
 }
