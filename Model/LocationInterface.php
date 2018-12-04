@@ -65,7 +65,7 @@ interface LocationInterface
     /**
      * Returns the emoji icon for the flag of the country associated with the IP.
      *
-     * @return string UTF-8
+     * @return string unicode
      */
     public function getCountryFlagEmoji(): string;
 
@@ -77,7 +77,7 @@ interface LocationInterface
     /**
      * Returns the unicode value of the emoji icon for the flag of the country associated with the IP. (e.g. U+1F1F5 U+1F1F9 for the Portuguese flag)
      *
-     * @return string UTF-8
+     * @return string unicode
      */
     public function getCountryFlagEmojiUnicode(): string;
 
@@ -89,7 +89,7 @@ interface LocationInterface
     /**
      * Returns the calling/dial code of the country associated with the IP. (e.g. 351) for Portugal.
      *
-     * Min length 1, max length 5.
+     * Min length 1, max length 3.
      *
      * @return int
      */
