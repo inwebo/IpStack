@@ -4,6 +4,8 @@ namespace Inwebo\Component\IpStack\Model;
 
 /**
  * Interface LocationInterface
+ *
+ * UTF-8
  */
 interface LocationInterface
 {
@@ -32,11 +34,16 @@ interface LocationInterface
     public function setCapital(string $capital): void;
 
     /**
-     * @return Languages
+     * @return Languages[]
      */
-    public function getLanguages(): Languages;
+    public function getLanguages(): array;
 
-    public function addLanguage(Language $language);
+    /**
+     * @param Language $language
+     *
+     * @return void
+     */
+    public function addLanguage(Language $language): void;
 
     /**
      * @param Languages $languages

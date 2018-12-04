@@ -4,6 +4,8 @@ namespace Inwebo\Component\IpStack\Model;
 
 /**
  * Class Location
+ *
+ * UTF-8
  */
 class Location implements LocationInterface
 {
@@ -11,7 +13,7 @@ class Location implements LocationInterface
     protected $geonameId;
     /** @var string */
     protected $capital;
-    /** @var Languages */
+    /** @var LanguagesInterface[] */
     protected $languages;
     /** @var string */
     protected $countryFlag;
@@ -61,16 +63,16 @@ class Location implements LocationInterface
     }
 
     /**
-     * @return Languages
+     * @inheritdoc
      */
-    public function getLanguages(): Languages
+    public function getLanguages(): array
     {
         return $this->languages;
     }
 
-    public function addLanguage(Language $language)
+    public function addLanguage(Language $language): void
     {
-        $this->languages->getLanguages()[] = $language;
+        $this->languages[] = $language;
     }
 
     /**
