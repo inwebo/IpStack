@@ -27,9 +27,7 @@ class Location implements LocationInterface
     protected $isEu;
 
     /**
-     * Returns the unique geoname identifier in accordance with the Geonames Registry.
-     *
-     * @return string
+     * @inheritdoc
      */
     public function getGeonameId(): string
     {
@@ -37,7 +35,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * @param string $geonameId
+     * @inheritdoc
      */
     public function setGeonameId(string $geonameId): void
     {
@@ -45,9 +43,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * Returns the capital city of the country associated with the IP.
-     *
-     * @return string
+     * @inheritdoc
      */
     public function getCapital(): string
     {
@@ -55,7 +51,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * @param string $capital
+     * @inheritdoc
      */
     public function setCapital(string $capital): void
     {
@@ -70,13 +66,16 @@ class Location implements LocationInterface
         return $this->languages;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function addLanguage(Language $language): void
     {
         $this->languages[] = $language;
     }
 
     /**
-     * @param Languages $languages
+     * @inheritdoc
      */
     public function setLanguages(Languages $languages): void
     {
@@ -84,9 +83,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * Returns an HTTP URL leading to an SVG-flag icon for the country associated with the IP.
-     *
-     * @return string
+     * @inheritdoc
      */
     public function getCountryFlag(): string
     {
@@ -94,7 +91,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * @param string $countryFlag
+     * @inheritdoc
      */
     public function setCountryFlag(string $countryFlag): void
     {
@@ -102,9 +99,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * Returns the emoji icon for the flag of the country associated with the IP.
-     *
-     * @return string
+     * @inheritdoc
      */
     public function getCountryFlagEmoji(): string
     {
@@ -112,7 +107,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * @param string $countryFlagEmoji
+     * @inheritdoc
      */
     public function setCountryFlagEmoji(string $countryFlagEmoji): void
     {
@@ -120,9 +115,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * Returns the unicode value of the emoji icon for the flag of the country associated with the IP. (e.g. U+1F1F5 U+1F1F9 for the Portuguese flag)
-     *
-     * @return string
+     * @inheritdoc
      */
     public function getCountryFlagEmojiUnicode(): string
     {
@@ -130,7 +123,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * @param string $countryFlagEmojiUnicode
+     * @inheritdoc
      */
     public function setCountryFlagEmojiUnicode(string $countryFlagEmojiUnicode): void
     {
@@ -138,9 +131,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * 	Returns the calling/dial code of the country associated with the IP. (e.g. 351) for Portugal.
-     *
-     * @return int
+     * @inheritdoc
      */
     public function getCallingCode(): int
     {
@@ -148,7 +139,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * @param int $callingCode
+     * @inheritdoc
      */
     public function setCallingCode(int $callingCode): void
     {
@@ -156,9 +147,7 @@ class Location implements LocationInterface
     }
 
     /**
-     * Returns true or false depending on whether or not the county associated with the IP is in the European Union.
-     *
-     * @return bool
+     * @inheritdoc
      */
     public function isEu(): bool
     {
@@ -166,15 +155,16 @@ class Location implements LocationInterface
     }
 
     /**
-     * @param bool $isEu
+     * @inheritdoc
      */
     public function setIsEu(bool $isEu): void
     {
         $this->isEu = $isEu;
     }
 
-
-
+    /**
+     * Location constructor.
+     */
     public function __construct()
     {
     }

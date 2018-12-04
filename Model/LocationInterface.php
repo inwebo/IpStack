@@ -65,29 +65,31 @@ interface LocationInterface
     /**
      * Returns the emoji icon for the flag of the country associated with the IP.
      *
-     * @return string
+     * @return string UTF-8
      */
     public function getCountryFlagEmoji(): string;
 
     /**
-     * @param string $countryFlagEmoji
+     * @param string $countryFlagEmoji UTF-8
      */
     public function setCountryFlagEmoji(string $countryFlagEmoji): void;
 
     /**
      * Returns the unicode value of the emoji icon for the flag of the country associated with the IP. (e.g. U+1F1F5 U+1F1F9 for the Portuguese flag)
      *
-     * @return string
+     * @return string UTF-8
      */
     public function getCountryFlagEmojiUnicode(): string;
 
     /**
-     * @param string $countryFlagEmojiUnicode
+     * @param string $countryFlagEmojiUnicode UTF-8
      */
     public function setCountryFlagEmojiUnicode(string $countryFlagEmojiUnicode): void;
 
     /**
-     *    Returns the calling/dial code of the country associated with the IP. (e.g. 351) for Portugal.
+     * Returns the calling/dial code of the country associated with the IP. (e.g. 351) for Portugal.
+     *
+     * Min length 1, max length 5.
      *
      * @return int
      */
