@@ -10,6 +10,8 @@ interface ResponseInterface
     /**
      * Returns the requested IP address.
      *
+     * IPV4 or IPV6
+     *
      * @return string
      */
     public function getIp(): string;
