@@ -2,7 +2,6 @@
 
 namespace Inwebo\Component\IpStack\Model;
 
-
 class Currency implements CurrencyInterface
 {
     /** @var string */

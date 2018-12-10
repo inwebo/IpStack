@@ -7,5 +7,11 @@ namespace Inwebo\Component\IpStack\Model;
  */
 class IpStackAbstract
 {
+    /**
+     * @param int $hits
+     */
+    public function getLimit(int $hits)
+    {
 
+    }
 }

@@ -2,7 +2,6 @@
 
 namespace Inwebo\Component\IpStack\Model;
 
-
 class Connection implements ConnectionInterface
 {
     /** @var string */

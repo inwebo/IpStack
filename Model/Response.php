@@ -363,4 +363,20 @@ class Response implements ResponseInterface
         $this->timeZone = $timeZone;
     }
     // endregion
+
+    /**
+     * @inheritdoc
+     */
+    public function isIpV4(): bool
+    {
+        return (is_bool(filter_var($this->ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) ? false : true);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function isIpV6(): bool
+    {
+        return !$this->isIpV4();
+    }
 }
