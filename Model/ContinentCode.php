@@ -20,7 +20,7 @@ class ContinentCode implements ContinentCodeInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getCode(): string
     {
