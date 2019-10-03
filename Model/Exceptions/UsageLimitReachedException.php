@@ -47,7 +47,7 @@ class UsageLimitReachedException extends BaseException
 
         return (is_null($this->getCurrentUsage())) ?
             sprintf($message, '') :
-            sprintf($message, sprintf('Your current usage %s', $this->getCurrentUsage()))
+            sprintf($message, sprintf($message . '. Your current usage %s', $this->getCurrentUsage()))
             ;
     }
 }
