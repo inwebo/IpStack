@@ -16,7 +16,7 @@ class Currency implements CurrencyInterface
     protected $symbolNative;
 
     /**
-     * Returns the 3-letter code of the main currency associated with the IP. Example: USD
+     * Returns the 3-letter code of the main currency associated with the IP. Example: USD.
      *
      * @see https://www.iban.com/currency-codes
      *
