@@ -12,7 +12,7 @@ class ContinentCode implements ContinentCodeInterface
     protected $name;
 
     /**
-     * {@inheritdoc}
+     * {@inheritdoc }
      */
     public function setCode(string $code): void
     {
