@@ -6,6 +6,7 @@ namespace Inwebo\Component\IpStack\Model;
 class ContinentCode implements ContinentCodeInterface
 {
     /** @var string */
+
     protected $code;
     /** @var string */
     protected $name;
